@@ -27,7 +27,7 @@ makeCacheMatrix <- function(x = matrix()) {
         set_Inverse<- function(inverse_arg) inverse_Obj <<-inverse_arg 
         
         # The makeCacheMatrix return object of type makeCacheMatrix()        
-        list(set_Matrix=set_Matrix, get_Inverse=get_Inverse, get_Matrix=get_Matrix,set_Inverse)
+        list(set_Matrix=set_Matrix, get_Inverse=get_Inverse, get_Matrix=get_Matrix,set_Inverse=set_Inverse)
 }
 
 
