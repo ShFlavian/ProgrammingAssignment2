@@ -46,12 +46,16 @@ cacheSolve <- function(x, ...) {
         
         message("calculating matrix inverse ...") 
         
+        # Get the matrix data
         data <- x$get_Matrix()  
         
+        # calculates matrix inverse
         inverse_val<-solve(data)
         
+        # returns the value of the inverse_val to the makeCacheMatrix()
         x$set_Inverse(inverse_val)
         
+        #Print the value of inverse_val object
         inverse_val   
         
         
