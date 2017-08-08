@@ -44,6 +44,15 @@ cacheSolve <- function(x, ...) {
                 return(inverse_val)
         }
         
+        message("calculating matrix inverse ...") 
         
-        ## Return a matrix that is the inverse of 'x'
+        data <- x$get_Matrix()  
+        
+        inverse_val<-solve(data)
+        
+        x$set_Inverse(inverse_val)
+        
+        inverse_val   
+        
+        
 }
