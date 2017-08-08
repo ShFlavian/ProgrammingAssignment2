@@ -49,14 +49,24 @@ cacheSolve <- function(x, ...) {
         # Get the matrix data
         data <- x$get_Matrix()  
         
-        # calculates matrix inverse
-        inverse_val<-solve(data)
+       
         
-        # returns the value of the inverse_val to the makeCacheMatrix()
-        x$set_Inverse(inverse_val)
+        # The inverse of a matrix will exist only if the determinant is not zero
+        # calculate Determinant of the matrix 
+        det_val<-det(data)
         
-        #Print the value of inverse_val object
-        inverse_val   
         
+        if(det_val != 0){
+                # calculates matrix inverse
+                inverse_val<-solve(data)
+        
+                # returns the value of the inverse_val to the makeCacheMatrix()
+                x$set_Inverse(inverse_val)
+        
+                #Print the value of inverse_val object
+                inverse_val   
+        }else
+                message("No inverse exist")
+                
         
 }
