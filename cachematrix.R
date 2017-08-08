@@ -1,7 +1,13 @@
 
 
 makeCacheMatrix <- function(x = matrix()) {
+        
+        inverse_Obj<-NULL
 
+        set_Matrix<- function() {}
+        get_Inverse<- function(){}
+        get_Matrix<- function() {}
+        set_Inverse<- function(){}
 }
 
 
